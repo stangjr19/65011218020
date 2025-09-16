@@ -1,0 +1,142 @@
+/* Retro 90s Calculator Styles */
+
+/* Pixel font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background: linear-gradient(135deg, #d53e61 0%, #860280 100%);
+    font-family: 'Press Start 2P', monospace;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background: #830745;
+    border-bottom: 3px dotted #333;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    letter-spacing: 2px;
+}
+
+.blink {
+    animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.calculator {
+    background: #fff;
+    border: 4px ridge #b8b8b8;
+    box-shadow: 0 0 16px #888;
+    padding: 1.5em;
+    border-radius: 12px;
+    width: 320px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    width: 100%;
+    background: #e0e0ff;
+    border: 2px dotted #333;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    padding: 0.7em 0.5em;
+    text-align: right;
+    font-size: 1em;
+    min-height: 3.5em;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+#expression {
+    color: #333;
+    font-size: 0.9em;
+    min-height: 1.2em;
+}
+
+#result {
+    color: #008080;
+    font-size: 1.2em;
+    min-height: 1.5em;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    width: 100%;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.7em 0;
+    background: linear-gradient(180deg, #f0f0f0 0%, #d0d0d0 100%);
+    border: 3px outset #b8b8b8;
+    border-radius: 6px;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 #fff, 2px 2px 0 #b8b8b8;
+    transition: background 0.2s, transform 0.1s;
+    outline: none;
+    position: relative;
+}
+
+button:active {
+    background: #ffe080;
+    border: 3px inset #b8b8b8;
+    transform: translateY(2px);
+}
+
+button:hover {
+    background: #c0ffe0;
+    color: #008080;
+}
+
+button.equals {
+    grid-column: span 4;
+    background: linear-gradient(180deg, #ffec80 0%, #ffd080 100%);
+    color: #c00;
+    font-weight: bold;
+    border: 3px outset #ffb800;
+    margin-top: 0.5em;
+    font-size: 1.1em;
+}
+
+button.equals:active {
+    background: #fff080;
+    border: 3px inset #ffb800;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 0.5em;
+        width: 98vw;
+    }
+    .display {
+        font-size: 0.85em;
+        padding: 0.5em 0.2em;
+    }
+    button {
+        font-size: 0.9em;
+        padding: 0.5em 0;
+    }
+}
+
+/* Accessibility focus */
+button:focus {
+    outline: 2px dashed #008080;
+    outline-offset: 2px;
+}

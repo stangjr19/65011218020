@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro Calculator ป.4</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Retro header with marquee effect -->
+    <header>
+        <marquee behavior="alternate" scrollamount="4">🕹️ <span class="blink">เครื่องคิดเลขยุค 90</span> 🕹️</marquee>
+    </header>
+    <main>
+        <div class="calculator" role="application" aria-label="เครื่องคิดเลข">
+            <!-- Display for expression and result -->
+            <div class="display">
+                <div id="expression" aria-label="นิพจน์"></div>
+                <div id="result" aria-label="ผลลัพธ์"></div>
+            </div>
+            <!-- Calculator buttons -->
+            <div class="buttons">
+                <!-- Row 1 -->
+                <button aria-label="Clear" data-action="clear">C</button>
+                <button aria-label="Backspace" data-action="backspace">←</button>
+                <button aria-label="Percent" data-value="%">%</button>
+                <button aria-label="Divide" data-value="÷">÷</button>
+                <!-- Row 2 -->
+                <button aria-label="7" data-value="7">7</button>
+                <button aria-label="8" data-value="8">8</button>
+                <button aria-label="9" data-value="9">9</button>
+                <button aria-label="Multiply" data-value="×">×</button>
+                <!-- Row 3 -->
+                <button aria-label="4" data-value="4">4</button>
+                <button aria-label="5" data-value="5">5</button>
+                <button aria-label="6" data-value="6">6</button>
+                <button aria-label="Subtract" data-value="-">-</button>
+                <!-- Row 4 -->
+                <button aria-label="1" data-value="1">1</button>
+                <button aria-label="2" data-value="2">2</button>
+                <button aria-label="3" data-value="3">3</button>
+                <button aria-label="Add" data-value="+">+</button>
+                <!-- Row 5 -->
+                <button aria-label="Left Parenthesis" data-value="(">(</button>
+                <button aria-label="0" data-value="0">0</button>
+                <button aria-label="Decimal Point" data-value=".">.</button>
+                <button aria-label="Right Parenthesis" data-value=")">)</button>
+                <!-- Row 6 -->
+                <button class="equals" aria-label="Equals" data-action="equals">=</button>
+            </div>
+        </div>
+    </main>
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+</body>
+</html>
